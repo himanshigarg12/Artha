@@ -9,6 +9,7 @@ import budgetRoutes from "./routes/budgetRoutes.js";
 import reportRoutes from "./routes/reportRoutes.js";
 import dashboardRoutes from "./routes/dashboardRoutes.js";
 import investmentRoutes from "./routes/investmentRoutes.js";
+import assistantRoutes from "./routes/assistantRoutes.js";
 
 dotenv.config();
 
@@ -29,6 +30,7 @@ app.use("/api/budgets", budgetRoutes);
 app.use("/api/reports", reportRoutes);
 app.use("/api/dashboard", dashboardRoutes);
 app.use("/api/investments", investmentRoutes);
+app.use("/api/assistant", assistantRoutes);
 app.use(errorHandler);
 
 app.listen(PORT, () => console.log(`Artha server running on port ${PORT}`));
