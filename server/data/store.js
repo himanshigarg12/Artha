@@ -13,3 +13,9 @@ export const budgets = [
 ];
 
 export const alerts = [];
+
+export const holdings = [
+  { id: "inv-1", symbol: "RELIANCE", name: "Reliance Industries", assetType: "stock", quantity: 10, buyPrice: 2400, currentPrice: 2550, account: "acc-3" },
+  { id: "inv-2", symbol: "NIFTYBEES", name: "Nifty 50 Index Fund", assetType: "mutual_fund", quantity: 100, buyPrice: 150, currentPrice: 165, account: "acc-3" },
+  { id: "inv-3", symbol: "GOLDBEES", name: "Gold ETF", assetType: "gold", quantity: 200, buyPrice: 55, currentPrice: 53, account: "acc-3" },
+];
