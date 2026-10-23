@@ -6,6 +6,7 @@ import { errorHandler } from "./middleware/errorHandler.js";
 import accountRoutes from "./routes/accountRoutes.js";
 import transactionRoutes from "./routes/transactionRoutes.js";
 import budgetRoutes from "./routes/budgetRoutes.js";
+import reportRoutes from "./routes/reportRoutes.js";
 
 dotenv.config();
 
@@ -23,6 +24,7 @@ app.get("/api/health", (req, res) => {
 app.use("/api/accounts", accountRoutes);
 app.use("/api/transactions", transactionRoutes);
 app.use("/api/budgets", budgetRoutes);
+app.use("/api/reports", reportRoutes);
 app.use(errorHandler);
 
 app.listen(PORT, () => console.log(`Artha server running on port ${PORT}`));
