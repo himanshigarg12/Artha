@@ -7,6 +7,7 @@ import accountRoutes from "./routes/accountRoutes.js";
 import transactionRoutes from "./routes/transactionRoutes.js";
 import budgetRoutes from "./routes/budgetRoutes.js";
 import reportRoutes from "./routes/reportRoutes.js";
+import dashboardRoutes from "./routes/dashboardRoutes.js";
 
 dotenv.config();
 
@@ -25,6 +26,7 @@ app.use("/api/accounts", accountRoutes);
 app.use("/api/transactions", transactionRoutes);
 app.use("/api/budgets", budgetRoutes);
 app.use("/api/reports", reportRoutes);
+app.use("/api/dashboard", dashboardRoutes);
 app.use(errorHandler);
 
 app.listen(PORT, () => console.log(`Artha server running on port ${PORT}`));
