@@ -16,7 +16,7 @@ const findAccount = (id) => accounts.find((a) => a.id === id);
 // flow "in"  = money coming into the account
 // flow "out" = money leaving the account
 // For credit/loan accounts the balance is the amount owed, so it moves the opposite way
-const applyFlow = (account, flow, amount) => {
+export const applyFlow = (account, flow, amount) => {
   const sign = flow === "in" ? 1 : -1;
   const isLiability = LIABILITIES.includes(account.type);
   account.balance += isLiability ? -sign * amount : sign * amount;
@@ -89,7 +89,7 @@ export const createTransaction = (req, res, next) => {
     note,
   };
 
-   transactions.push(transaction);
+  transactions.push(transaction);
   checkBudget(transaction);
   res.status(201).json(transaction);
 };
